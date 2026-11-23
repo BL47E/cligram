@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cligram"
+version = "0.1.0"
+description = "Mirror a saved Instagram Reel collection to your Linux PC"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["playwright>=1.55,<2"]
+
+[project.scripts]
+cligram = "cligram.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cligram"]
